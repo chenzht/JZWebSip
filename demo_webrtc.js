@@ -16,13 +16,12 @@ document.write("<script src='SDK_JZWebSip.js'></script>");
 var session;
 
 
-var arr_domain = ['ipcc.ucpaas.com', '113.31.16.201', '113.31.21.234'];
-//var arr_ws = ['ws://ipcc.ucpaas.com:5166', 'ws://113.31.16.201:5166', 'ws://113.31.21.234:5066'];
-var arr_wss = ['wss://ipcc.ucpaas.com:5164', 'wss://113.31.16.201:5164', 'wss://113.31.21.234:7443'];
+var arr_domain = ['域名'];
+var arr_wss = ['wss'];
 
-var arr_username = ['62585050566263', '62585050566264', '63789050566265', '63789050566304'];
-var arr_password = ['2d7b7790', '14f3622d', '27ea0488', '4c3995d2'];
-var arr_displayName = ['62585050566263', '62585050566264', '63789050566265', '63789050566304'];
+var arr_username = ['用户名'];
+var arr_password = ['密码'];
+var arr_displayName = ['昵称'];
 
 
 
