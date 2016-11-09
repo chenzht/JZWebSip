@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webrtc 4 UC</title>
+
+
+    <!--<script src="https://rawgit.com/onsip/SIP.js/0.7.5/dist/sip-0.7.5.js"></script>-->
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+    <script src="demo_webrtc.js"></script>
+
+
+</head>
+
+<style>
+    div {
+        margin: 20px;
+    }
+
+    input, select  {
+        margin-right: 20px;
+    }
+</style>
+
+<body>
+
+<div>
+
+    <div style="margin: 40px; width: 100%">
+        <p style="width: 65%; text-align: center; font-size: 25px">Webrtc V2.0.0.2</p>
+    </div>
+
+
+    <div>
+        <select name="select" id="select_domain" class="xla_k" style="margin-right: 20px" onchange="fillDomain()">
+            <option value="选择账号">选择配置</option>
+            <option value="ipcc.ucpaas.com">ipcc.ucpaas.com</option>
+            <option value="ipcc.ucpaas.com222">113.31.16.201</option>
+            <option value="ipcc.ucpaas.com222">113.31.21.234</option>
+        </select>
+
+        <button id="init" onclick="settingAction()">修改配置</button>
+
+        <input type="text" id="domain_init" placeholder="domain" style="width: 120px">
+        <!--<input type="text" id="ws_init" placeholder="ws" style="width: 178px">-->
+        <input type="text" id="wss_init" placeholder="wss" style="width: 178px">
+
+    </div>
+
+
+    <div>
+
+        <select name="select" id="select_login_user" class="xla_k" style="margin-right: 20px" onchange="fillLoginUser()">
+            <option value="选择账号">选择账号</option>
+            <option value="62585050566263">62585050566263</option>
+            <option value="62585050566264">62585050566264</option>
+            <option value="62585050566264">63789050566265</option>
+            <option value="62585050566264">63789050566304</option>
+        </select>
+
+        <button id="login" onclick="loginAction()">登录</button>
+        <button id="logout" onclick="logoutAction()">退出</button>
+
+        <input type="text" id="username_login" placeholder="username">
+        <input type="text" id="password_login" placeholder="password">
+        <input type="text" id="displayName_login" placeholder="displayName">
+
+    </div>
+
+    <div>
+        <select name="select" id="select_called" class="xla_k" style="margin-right: 20px" onchange="fillCalled()">
+            <option value="选择账号">选择账号</option>
+            <option value="62585050566263">62585050566263</option>
+            <option value="62585050566264">62585050566264</option>
+            <option value="62585050566264">63789050566265</option>
+            <option value="62585050566264">63789050566304</option>
+        </select>
+
+        <button id="startCall" onclick="startAction()">拨号</button>
+        <button id="answerCall" onclick="answerAction()">接听</button>
+        <button id="rejectCall" onclick="rejectAction()">拒接</button>
+        <button id="cancelCall" onclick="cancelAction()">取消</button>
+        <button id="endCall" onclick="endAction()" style="margin-right: 25px">挂断</button>
+
+        <input type="text" id="username_called" placeholder="called">
+
+        <button id="cleanData" onclick="cleanAction()">清空数据</button>
+
+
+    </div>
+
+
+</div>
+
+<div>
+    <!--<video id="remoteVideo" class="remote"></video>-->
+    <audio id="remoteAudio" class="remote"></audio>
+    <audio id="localAudio" class="local" muted="muted"></audio>
+    <!--<video id="localVideo" muted="muted" class="local"></video>-->
+</div>
+
+<div style="height: 700px">
+    <textarea id="text_log" style=" width: 70%; height: 100%;"></textarea>
+</div>
+
+
+
+
+</body>
+</html>
